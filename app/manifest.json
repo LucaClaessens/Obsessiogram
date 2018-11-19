@@ -1,0 +1,51 @@
+{
+  "name": "Obsessiogram",
+  "short_name": "Obsessiogram",
+  "description": "An application that watches your Facebook behaviour.",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "default_locale": "en",
+  "icons": {
+    "16": "images/icon-16x16.png",
+    "144": "images/icon-144x144.png"
+  },
+  "background": {
+    "scripts": [
+      "scripts/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "images/icon-16x16.png",
+      "32": "images/icon-32x32.png"
+    },
+    "default_title": "Obsessiogram",
+    "default_popup": "pages/popup.html"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; https://ssl.google-analytics.com https://www.youtube.com https://s.ytimg.com https://gdata.youtube.com; object-src 'self'",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.facebook.com/*",
+        "https://www.facebook.com/*"
+      ],
+      "css": [
+        "styles/contentscript.css"
+      ],
+      "js": [
+        "scripts/contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "permissions": [
+    "contentSettings",
+    "contextMenus",
+    "debugger",
+    "storage",
+    "videoCapture",
+    "webRequest",
+    "*://*.facebook.com/"
+  ]
+}

@@ -1,4 +1,4 @@
-# Soline
+# Obsessiogram
 
 A browser extension that observes browsing behavior and intervenes by blocking websites when useless activity is detected.
 

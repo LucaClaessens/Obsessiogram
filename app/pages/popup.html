@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Popup</title>
+  <link rel="stylesheet" type="text/css" href="../styles/popup.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+</head>
+<body>
+
+  <form class="pure-form pure-form-aligned">
+    <fieldset>
+        <legend>Settings</legend>
+
+        <label for="duration">Scroll measurement session duration</label>
+        <input id="duration" type="number" placeholder="Duration">
+        <span class="pure-form-message">(In seconds)</span>
+
+        <label for="scrollticks">Scroll distance needed</label>
+        <input id="scrollticks" type="number" placeholder="Ticks">
+        <span class="pure-form-message">(In scroll ticks)</span>
+
+        <label for="likecount">Amount of likes needed for trigger</label>
+        <input id="likecount" type="number" placeholder="Likes needed">
+
+        <label for="commentcount">Amount of comments needed for trigger</label>
+        <input id="commentcount" type="number" placeholder="Comments needed">
+
+        <label for="webcamtime">Time webcam will be active</label>
+        <input id="webcamtime" type="number" placeholder="Seconds">
+        <span class="pure-form-message">(If fake movement enabled)</span>
+
+        <label for="fakemovement" class="pure-checkbox">
+            <input id="fakemovement" type="checkbox"> Fake movement detection
+        </label>
+
+        <button type="submit" class="pure-button pure-button-primary">Save</button>
+    </fieldset>
+</form>
+
+  <script src="../scripts/popup.js"></script>
+</body>
+</html>
